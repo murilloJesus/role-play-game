@@ -10,5 +10,6 @@ import { createApp } from 'vue'
 
 import exampleComponent from './components/exampleComponent'
 
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-createApp(exampleComponent).mount("#app");
+createApp(exampleComponent).component('font-awesome-icon', FontAwesomeIcon).mount("#app");
