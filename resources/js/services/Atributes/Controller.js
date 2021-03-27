@@ -1,9 +1,9 @@
-import { useAtributeService } from "../AtributeService";
-import { usePontosAtributesService } from "./PontosService"
+import { useAtributeService } from "./AtributeService";
+import { usePontosService } from "./PontosService"
 
 export function useControllerAtributes(){
 
-  const pontos = usePontosAtributesService()
+  const pontos = usePontosService()
 
   
     const forca =  useAtributeService(pontos)

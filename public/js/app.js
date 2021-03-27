@@ -26656,33 +26656,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_Atributes_PontosService__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/Atributes/PontosService */ "./resources/js/services/Atributes/PontosService.js");
 /* harmony import */ var _AtributeComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AtributeComponent.vue */ "./resources/js/components/AtributeComponent.vue");
 /* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _services_Atributes_Controller__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/Atributes/Controller */ "./resources/js/services/Atributes/Controller.js");
 
 
 
 
 
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_3__.library.add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faFistRaised, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faRunning, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faHeartbeat, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faUserAlt, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faHatWizard, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faGraduationCap);
+
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_3__.library.add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faFistRaised, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faRunning, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faHeartbeat, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faUserAlt, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faHatWizard, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faGraduationCap);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     AtributeComponent: _AtributeComponent_vue__WEBPACK_IMPORTED_MODULE_2__.default
   },
   setup: function setup() {
-    var ctrl = (0,_services_Atributes_PontosService__WEBPACK_IMPORTED_MODULE_1__.usePontosService)();
-    var forca = (0,_services_Atributes_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(ctrl);
-    var agilidade = (0,_services_Atributes_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(ctrl);
-    var resistencia = (0,_services_Atributes_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(ctrl);
-    var carisma = (0,_services_Atributes_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(ctrl);
-    var sabedoria = (0,_services_Atributes_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(ctrl);
-    var inteligencia = (0,_services_Atributes_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(ctrl);
+    var controller = (0,_services_Atributes_Controller__WEBPACK_IMPORTED_MODULE_4__.useControllerAtributes)(); // const ctrl = usePontosService()
+    // const forca = useAtributeService(ctrl)
+    // const agilidade = useAtributeService(ctrl)
+    // const resistencia = useAtributeService(ctrl)
+    // const carisma = useAtributeService(ctrl)
+    // const sabedoria = useAtributeService(ctrl)
+    // const inteligencia = useAtributeService(ctrl)
+
     return {
-      ctrl: ctrl,
-      forca: forca,
-      agilidade: agilidade,
-      resistencia: resistencia,
-      carisma: carisma,
-      sabedoria: sabedoria,
-      inteligencia: inteligencia
+      controller: controller // ctrl,
+      // forca,
+      // agilidade,
+      // resistencia,
+      // carisma,
+      // sabedoria,
+      // inteligencia
+
     };
   }
 });
@@ -26804,32 +26808,32 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_atribute_component = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("atribute-component");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_atribute_component, {
-    attr: $setup.forca,
+    attr: $setup.controller.forca,
     icon: ['fa', 'fist-raised']
   }, null, 8
   /* PROPS */
   , ["attr"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_atribute_component, {
-    attr: $setup.agilidade,
+    attr: $setup.controller.agilidade,
     icon: ['fa', 'running']
   }, null, 8
   /* PROPS */
   , ["attr"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_atribute_component, {
-    attr: $setup.resistencia,
+    attr: $setup.controller.resistencia,
     icon: ['fa', 'heartbeat']
   }, null, 8
   /* PROPS */
   , ["attr"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_atribute_component, {
-    attr: $setup.carisma,
+    attr: $setup.controller.carisma,
     icon: ['fa', 'user-alt']
   }, null, 8
   /* PROPS */
   , ["attr"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_atribute_component, {
-    attr: $setup.sabedoria,
+    attr: $setup.controller.sabedoria,
     icon: ['fa', 'hat-wizard']
   }, null, 8
   /* PROPS */
   , ["attr"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_atribute_component, {
-    attr: $setup.inteligencia,
+    attr: $setup.controller.inteligencia,
     icon: ['fa', 'graduation-cap']
   }, null, 8
   /* PROPS */
@@ -26968,6 +26972,42 @@ function useAtributeService(controller) {
     value: value,
     incrementValue: incrementValue,
     canAdd: canAdd
+  };
+}
+
+/***/ }),
+
+/***/ "./resources/js/services/Atributes/Controller.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/services/Atributes/Controller.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useControllerAtributes": () => (/* binding */ useControllerAtributes)
+/* harmony export */ });
+/* harmony import */ var _AtributeService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AtributeService */ "./resources/js/services/Atributes/AtributeService.js");
+/* harmony import */ var _PontosService__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PontosService */ "./resources/js/services/Atributes/PontosService.js");
+
+
+function useControllerAtributes() {
+  var pontos = (0,_PontosService__WEBPACK_IMPORTED_MODULE_1__.usePontosService)();
+  var forca = (0,_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(pontos);
+  var agilidade = (0,_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(pontos);
+  var resistencia = (0,_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(pontos);
+  var carisma = (0,_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(pontos);
+  var sabedoria = (0,_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(pontos);
+  var inteligencia = (0,_AtributeService__WEBPACK_IMPORTED_MODULE_0__.useAtributeService)(pontos);
+  return {
+    pontos: pontos,
+    forca: forca,
+    agilidade: agilidade,
+    resistencia: resistencia,
+    carisma: carisma,
+    sabedoria: sabedoria,
+    inteligencia: inteligencia
   };
 }
 

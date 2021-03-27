@@ -2,37 +2,37 @@
   <div class="row">
     <div class="col-2">
       <atribute-component
-        :attr="forca"
+        :attr="controller.forca"
         :icon="['fa', 'fist-raised']"
       />
     </div>
     <div class="col-2">
       <atribute-component
-        :attr="agilidade"
+        :attr="controller.agilidade"
         :icon="['fa', 'running']"
       />
     </div>
     <div class="col-2">
       <atribute-component
-        :attr="resistencia"
+        :attr="controller.resistencia"
         :icon="['fa', 'heartbeat']"
       />
     </div>
     <div class="col-2">
       <atribute-component
-        :attr="carisma"
+        :attr="controller.carisma"
         :icon="['fa','user-alt']"
       />
     </div>
     <div class="col-2">
       <atribute-component
-        :attr="sabedoria"
+        :attr="controller.sabedoria"
         :icon="['fa', 'hat-wizard']"
       />
     </div>
     <div class="col-2">
       <atribute-component
-        :attr="inteligencia"
+        :attr="controller.inteligencia"
         :icon="['fa', 'graduation-cap']"
       />
     </div>
@@ -46,29 +46,33 @@ import AtributeComponent from './AtributeComponent.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFistRaised, faRunning, faHeartbeat, faUserAlt, faHatWizard, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import { useControllerAtributes } from '../services/Atributes/Controller'
 
 library.add(faFistRaised, faRunning, faHeartbeat,faUserAlt, faHatWizard, faGraduationCap)
 
 export default {
   components: { AtributeComponent },
   setup() {
-    const ctrl = usePontosService()
+    const controller = useControllerAtributes();
 
-    const forca = useAtributeService(ctrl)
-    const agilidade = useAtributeService(ctrl)
-    const resistencia = useAtributeService(ctrl)
-    const carisma = useAtributeService(ctrl)
-    const sabedoria = useAtributeService(ctrl)
-    const inteligencia = useAtributeService(ctrl)
+    // const ctrl = usePontosService()
+
+    // const forca = useAtributeService(ctrl)
+    // const agilidade = useAtributeService(ctrl)
+    // const resistencia = useAtributeService(ctrl)
+    // const carisma = useAtributeService(ctrl)
+    // const sabedoria = useAtributeService(ctrl)
+    // const inteligencia = useAtributeService(ctrl)
 
     return {
-      ctrl,
-      forca,
-      agilidade,
-      resistencia,
-      carisma,
-      sabedoria,
-      inteligencia
+      controller
+      // ctrl,
+      // forca,
+      // agilidade,
+      // resistencia,
+      // carisma,
+      // sabedoria,
+      // inteligencia
     }
   }
 }
