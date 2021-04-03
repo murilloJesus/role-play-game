@@ -8,8 +8,10 @@ require('./bootstrap');
 
 import { createApp } from 'vue'
 
-import exampleComponent from './components/exampleComponent'
+import Player from './components/PlayerComponent.vue'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-createApp(exampleComponent).component('font-awesome-icon', FontAwesomeIcon).mount("#app");
+createApp(Player)
+  .component('font-awesome-icon', FontAwesomeIcon)
+  .mount("#app");

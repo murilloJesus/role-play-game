@@ -8,7 +8,7 @@
         <font-awesome-icon :icon="icon" />
       </h3>
       <p class="card-text">
-        {{ attr.value.value }}
+        {{ attr.value }}
       </p>
       <button
         v-if="showBtn"
@@ -27,8 +27,8 @@
 import { computed } from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlusSquare, faQuestion } from '@fortawesome/free-solid-svg-icons'
-import { useAtributeService } from '../services/Atributes/AtributeService'
-import { usePontosService } from '../services/Atributes/PontosService'
+import { useAtributeService } from '../services/AtributeService'
+import { usePontosService } from '../services/PontosService'
 
 library.add( faPlusSquare, faQuestion )
 
@@ -48,6 +48,7 @@ export default {
     }
   },
   setup(props) {
+
     const showBtn = computed(() => {
       return props.attr.canAdd()
     })
