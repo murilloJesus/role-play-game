@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" style="width: 100%">
     <div
       class="card-body text-center"
       style="color: blue;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;"

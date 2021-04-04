@@ -1,14 +1,15 @@
 import { reactive } from "@vue/reactivity";
 
-export function usePontosService () {
-
-  const configs = reactive({
+export function usePontosService (nivel, config = {
     distribuided: 0,
-    total: 5,
-  })
-  
+    inicial: 5,
+    por_nivel: 2
+  }) {
+
+  const configs = reactive(config);
+
   function hasPointsToAdd(){
-    return configs.total > configs.distribuided
+    return ( configs.inicial + ( nivel.nivel.value * configs.por_nivel ) ) > configs.distribuided
   }
   
   function addPoints(){

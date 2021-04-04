@@ -1,11 +1,14 @@
 import { reactive } from "vue";
 import { useAtributeService } from "./AtributeService";
+import { useNivelService } from "./NivelService";
 import { usePontosService } from "./PontosService"
 import { useStatusService } from "./StatusService";
 
 export function useController(){
 
-  const pontos = usePontosService()
+  const nivel = useNivelService()
+
+  const pontos = usePontosService(nivel)
 
   const atributos = reactive({
     forca:  useAtributeService(pontos),
@@ -17,23 +20,24 @@ export function useController(){
   })
 
   const status = reactive({
-    vida: useStatusService({
+    vida: useStatusService(atributos, {
       base: 100,
       modifier: 'resistencia',
       modifier_base: 10,
       use: 0
-    }, atributos),
+    }),
 
-    energia: useStatusService({
+    energia: useStatusService(atributos, {
       base: 20,
       modifier: 'sabedoria',
       modifier_base: 2,
       use: 0
-    }, atributos)
+    })
 
   })
 
   return {
+    nivel,
     pontos,
     atributos,
     status

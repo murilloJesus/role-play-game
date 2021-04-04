@@ -1,11 +1,11 @@
 import { ref } from "@vue/reactivity"
 
-export function useStatusService(configs = {
+export function useStatusService(atributos, configs = {
   base: 100,
   modifier: 0,
   modifier_base: 5,
   use: 0
-}, atributos){
+}){
 
   var use = ref(configs.use);
 
