@@ -1,8 +1,8 @@
 import { reactive } from "vue";
-import { useAtributeService } from "./AtributeService";
-import { useNivelService } from "./NivelService";
-import { usePontosService } from "./PontosService"
-import { useStatusService } from "./StatusService";
+import { useAtributeService } from "./Atribute.service";
+import { useNivelService } from "./Nivel.service";
+import { usePontosService } from "./Pontos.service"
+import { useStatusService } from "./Status.service";
 
 export function useController(){
 

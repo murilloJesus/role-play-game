@@ -1,0 +1,35 @@
+{
+    "Açoite" : {
+        "nome" : "Açoite",
+        "velocidade" : 0,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Causa"
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 6
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modificador" : "forca",
+                            "funcao": "x/2"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "de dano."
+            }
+        ],
+        "requisito": "arma de corte",
+        "custo": 10
+    }
+}

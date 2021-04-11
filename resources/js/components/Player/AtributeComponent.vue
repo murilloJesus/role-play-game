@@ -27,8 +27,8 @@
 import { computed } from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlusSquare, faQuestion } from '@fortawesome/free-solid-svg-icons'
-import { useAtributeService } from '../services/AtributeService'
-import { usePontosService } from '../services/PontosService'
+import { useAtributeService } from '../../services/Atribute.service'
+import { usePontosService } from '../../services/Pontos.service'
 
 library.add( faPlusSquare, faQuestion )
 

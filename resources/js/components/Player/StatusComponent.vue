@@ -27,7 +27,7 @@
 
 <script>
 import { computed } from 'vue'
-import { useController } from '../services/Controller'
+import { useController } from '../../services/Controller'
 
 export default {
   props: {

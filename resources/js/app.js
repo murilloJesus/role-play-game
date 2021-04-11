@@ -7,11 +7,13 @@
 require('./bootstrap');
 
 import { createApp } from 'vue'
+import router from './router/index.js'
 
-import Player from './components/PlayerComponent.vue'
+import HomeTemplate from './components/HomeTemplate.vue'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-createApp(Player)
+createApp(HomeTemplate)
+  .use(router)
   .component('font-awesome-icon', FontAwesomeIcon)
   .mount("#app");

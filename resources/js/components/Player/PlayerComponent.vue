@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { useController } from '../services/Controller'
+import { useController } from '../../services/Controller'
 import AtributeGroupComponent from './AtributeGroupComponent'
 import DadosComponent from './DadosComponent.vue'
 import StatusComponent from './StatusComponent.vue'

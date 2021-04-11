@@ -1,0 +1,19 @@
+[
+    {
+        "name" : "Normal",
+        "desc" : "Pode ser usado durante o próprio turno."
+    },
+    {
+        "name" : "Rapida",
+        "desc" : "Pode ser utilizado ao final do turno."
+    },
+    {
+        "name" : "Instantanea",
+        "desc" : "Pode ser utilizado durante qualquer turno."
+    },
+    {
+        "name" : "Resposta",
+        "desc" : "Pode ser utilizado em resposta a uma ação."
+    }
+    
+]

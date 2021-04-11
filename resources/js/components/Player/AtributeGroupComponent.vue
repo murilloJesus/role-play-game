@@ -44,7 +44,7 @@ import AtributeComponent from './AtributeComponent.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFistRaised, faRunning, faHeartbeat, faUserAlt, faHatWizard, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
-import { useController } from './../services/Controller'
+import { useController } from './../../services/Controller'
 
 library.add(faFistRaised, faRunning, faHeartbeat,faUserAlt, faHatWizard, faGraduationCap)
 
