@@ -1,7 +1,6 @@
 <template>
   <div class="list-group">
     <skill-component />
-    <skill-component :skill="skill" />
   </div>
 </template>
 

@@ -4,7 +4,7 @@
     :key="index"
   >
     <dice :dice="item" />&nbsp 
-    <template v-if="index+1 < damage.dice.length && damage.real.length == 0">
+    <template v-if="index+1 < damage.dice.length">
       +&nbsp
     </template>
     <template v-if="index+1 == damage.dice.length && damage.real.length != 0">

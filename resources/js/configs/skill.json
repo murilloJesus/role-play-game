@@ -18,8 +18,12 @@
                     ],
                     "real" : [
                         {
-                            "modificador" : "forca",
-                            "funcao": "x/2"
+                            "modifier" : "forca",
+                            "function": "x/2"
+                        },
+                        {
+                            "modifier" : "inteligencia",
+                            "function": "x*2"
                         }
                     ]
                 }
@@ -29,7 +33,20 @@
                 "value": "de dano."
             }
         ],
-        "requisito": "arma de corte",
+        "requisitos": [
+            {
+                "type":"atributo",
+                "atributo":"forca",
+                "operator":">",
+                "comparison": 5
+            },
+            {
+                "type":"arma",
+                "atribute":"type",
+                "operator":"==",
+                "comparison":"corte"
+            }
+        ],
         "custo": 10
     }
 }

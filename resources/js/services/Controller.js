@@ -11,12 +11,12 @@ export function useController(){
   const pontos = usePontosService(nivel)
 
   const atributos = reactive({
-    forca:  useAtributeService(pontos),
-    agilidade:  useAtributeService(pontos),
-    resistencia:  useAtributeService(pontos),
-    carisma:  useAtributeService(pontos),
-    sabedoria:  useAtributeService(pontos),
-    inteligencia:  useAtributeService(pontos)
+    forca:  useAtributeService('Força', pontos),
+    agilidade:  useAtributeService('Agilidade', pontos),
+    resistencia:  useAtributeService('Resistência', pontos),
+    carisma:  useAtributeService('Carisma', pontos),
+    sabedoria:  useAtributeService('Sabedoria', pontos),
+    inteligencia:  useAtributeService('Inteligência', pontos)
   })
 
   const status = reactive({

@@ -21,7 +21,8 @@
 </template>
 
 <script>
-import { useController } from '../../services/Controller'
+import { computed } from 'vue'
+import { useStore } from 'vuex'
 import AtributeGroupComponent from './AtributeGroupComponent'
 import DadosComponent from './DadosComponent.vue'
 import StatusComponent from './StatusComponent.vue'
@@ -35,10 +36,10 @@ import StatusComponent from './StatusComponent.vue'
         DadosComponent
       },
       setup(){
-        const player = useController();
+        const store = new useStore()
 
         return {
-          player,
+          player: computed(() => store.state.player)
         }
       }
     }

@@ -15,7 +15,7 @@
             style="font-size: 5.575rem; 
                     margin-bottom: -15px;"
           >
-            {{ nivel.nivel.value }}
+            {{ nivel.nivel }}
           </h3>
           <small>
             {{ experiencia_atual }} / {{ experiencia_total }}

@@ -2,7 +2,7 @@
   <div class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">
-        {{ skill.name }}
+        {{ skill.nome }}
       </h5>
       <velocidade-component :velocidade="skill.velocidade" />
     </div>

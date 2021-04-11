@@ -8,6 +8,7 @@ require('./bootstrap');
 
 import { createApp } from 'vue'
 import router from './router/index.js'
+import store from './store/index.js'
 
 import HomeTemplate from './components/HomeTemplate.vue'
 
@@ -15,5 +16,6 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 createApp(HomeTemplate)
   .use(router)
+  .use(store)
   .component('font-awesome-icon', FontAwesomeIcon)
   .mount("#app");

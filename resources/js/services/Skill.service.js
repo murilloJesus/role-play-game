@@ -5,10 +5,10 @@ import sklJSON from './../configs/skill.json'
 export function useSkillService (configs = sklJSON['Açoite']) {
     
     const skill = reactive({
-        name: configs.name,
+        nome: configs.nome,
         velocidade: UseVelicidadeService(configs.velocidade),
         descricao: configs.descricao,
-        requisito: configs.requisito,
+        requisitos: configs.requisitos,
         custo: configs.custo
     })
 
