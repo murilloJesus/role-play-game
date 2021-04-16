@@ -33,20 +33,6 @@ export default {
     }, 
     props: ['damage']
 }
-// {
-//     "dice": [
-//         {
-//             "number": 1,
-//             "size": 6
-//         }
-//     ],
-//     "real" : [
-//         {
-//             "modificador" : "forca",
-//             "funcao": "x/2"
-//         }
-//     ]
-// }
 </script>
 
 <style>

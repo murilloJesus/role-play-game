@@ -24,7 +24,12 @@
     <body id="app" class="antialiased">
 
     </body>
+    <script src="/js/diceManager.js"></script>
     <script src="/js/app.js"></script>
+    <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+        crossorigin="anonymous"></script>
     <script type="text/javascript">
       $(document).ready(function () {
           $('#sidebarCollapse').on('click', function () {

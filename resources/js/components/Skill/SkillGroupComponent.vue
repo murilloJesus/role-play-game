@@ -1,6 +1,6 @@
 <template>
   <div class="list-group">
-    <skill-component />
+    <skill-component :skill="skill" />
   </div>
 </template>
 
@@ -9,16 +9,12 @@
 import {useSkillService} from './../../services/Skill.service'
 import SkillComponent from './SkillComponent.vue'
 
+import sklJSON from './../../configs/skill.json'
+
 export default {
   components: { SkillComponent },
     setup() {
-       const { skill } = useSkillService({
-            name: "Perfuração",
-            velocidade: 2,
-            descricao: "perfura o alvo",
-            requisito: "arma de disparo",
-            custo: 8
-       })
+       const skill = useSkillService(sklJSON['estocada'])
 
         return {
           skill

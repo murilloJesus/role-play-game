@@ -18,7 +18,7 @@ export default {
       const store = useStore()      
 
       const x = computed(() => store.state.player.atributos[props.real.modifier].value)
-      const nome =  store.state.player.atributos[props.real.modifier].nome
+      const nome =  store.state.player.atributos[props.real.modifier].name
 
       const tooltip = ref(null)
 

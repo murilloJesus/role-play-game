@@ -1,5 +1,5 @@
 {
-    "Açoite" : {
+    "açoite" : {
         "nome" : "Açoite",
         "velocidade" : 0,
         "descricao" : [
@@ -35,18 +35,58 @@
         ],
         "requisitos": [
             {
-                "type":"atributo",
-                "atributo":"forca",
+                "type":"Atributo",
+                "atribute":"forca",
                 "operator":">",
-                "comparison": 5
-            },
-            {
-                "type":"arma",
-                "atribute":"type",
-                "operator":"==",
-                "comparison":"corte"
+                "comparison": 0
             }
+            
         ],
         "custo": 10
+    },
+    "estocada" : {
+        "nome" : "Estocada",
+        "velocidade" : 1,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Golpeia a frente causando"
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 6
+                        },
+                        {
+                            "number": 1,
+                            "size": 12
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "forca",
+                            "function": "x/4 + 1"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "de dano."
+            }
+        ],
+        "requisitos": [
+            {
+                "type":"Atributo",
+                "atribute":"forca",
+                "operator":">",
+                "comparison": 3
+            }
+            
+        ],
+        "custo": 5
     }
 }
