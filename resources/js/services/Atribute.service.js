@@ -1,7 +1,7 @@
 import { ref } from "@vue/reactivity";
 
-export function useAtributeService (name, controller) {
-  const value = ref(0)
+export function useAtributeService (name, controller, base) {
+  const value = ref(base)
 
   function incrementValue() {
     if( canAdd() ){

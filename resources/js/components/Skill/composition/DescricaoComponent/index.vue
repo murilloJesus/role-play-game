@@ -6,6 +6,11 @@
         :key="index"
         :string="item.value"
       />
+      <acao
+        v-if="item.type == 'ação'"
+        :key="index"
+        :string="item.value"
+      />
       <damage
         v-if="item.type == 'damage'"
         :key="index"
@@ -18,9 +23,10 @@
 <script>
 import string from './string.vue'
 import damage from './DamageComponent/index.vue'
+import Acao from './acao.vue'
 
 export default {
-  components: { string, damage },
+  components: { string, damage, Acao },
     props: {
       descricao: {
         type: Array,

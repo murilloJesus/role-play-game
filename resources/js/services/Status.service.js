@@ -10,7 +10,7 @@ export function useStatusService(atributos, configs = {
   var use = ref(configs.use);
 
   function total_val(){
-    return configs.base + (atributos[configs.modifier].value * configs.modifier_base)
+    return configs.base + parseInt(atributos[configs.modifier].value * configs.modifier_base)
   }
 
   function final_val(){

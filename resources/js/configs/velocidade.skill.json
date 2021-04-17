@@ -5,11 +5,11 @@
     },
     {
         "name" : "Rapida",
-        "desc" : "Pode ser utilizado ao final do turno."
+        "desc" : "Pode ser utilizado ao final dos turnos."
     },
     {
         "name" : "Instantanea",
-        "desc" : "Pode ser utilizado durante qualquer turno."
+        "desc" : "Pode ser utilizado no final de qualquer turno."
     },
     {
         "name" : "Resposta",

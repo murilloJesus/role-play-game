@@ -1,38 +1,46 @@
+/* eslint-disable vue/html-indent */
 <template>
-  <div>
-    <div>
-      <div
-        class="text-center"
-        style="display: flex;
+  <div
+    style="   width: 90px;
+              height: 90px;
+              position:inherit;
+              z-index:10"
+  >
+    <div
+      class="text-center"
+      style="display: flex;
               align-items: center;
               justify-content: center;
               position: absolute;
-              width: 190px;
-              height: 190px;"
-      >
-        <div>
-          <h3
-            style="font-size: 5.575rem; 
+              width: 94px;
+              height: 99px;"
+    >
+      <div>
+        <h3
+          style="font-size: 3.575rem; 
                     margin-bottom: -15px;"
-          >
-            {{ nivel.nivel }}
-          </h3>
-          <small>
-            {{ experiencia_atual }} / {{ experiencia_total }}
-          </small>
-        </div>
+        >
+          {{ nivel.nivel }}
+        </h3>
+        <small>
+          {{ experiencia_atual }} / {{ experiencia_total }}
+        </small>
       </div>
-      <chart :experiencia="data_chart" />
     </div>
-    <div class="text-center">
+    <chart :experiencia="data_chart" />
+    <div
+      class="text-center"
+      style="    width: 226px; top: 81px; position: absolute;"
+    >
       <b>Murillo</b><br><small> Humano / Guerreiro </small>
     </div>
-    <a
-      class="btn btn-outline-primary"
-      role="button"
-      @click="nivel.add_experiencia(100)"
-    />
   </div>
+  <a
+    class="btn btn-outline-primary"
+    role="button"
+    style="z-index: 11;position: relative;"
+    @click="nivel.add_experiencia(100)"
+  />
 </template>
 
 <script>

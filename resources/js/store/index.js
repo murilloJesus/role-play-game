@@ -5,7 +5,7 @@ import { useController } from '../services/Controller'
 export default createStore({
   state () {
     return {
-      player: useController()
+      player: useController('nordico')
     }
   }
 })

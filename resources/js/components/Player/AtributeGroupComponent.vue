@@ -44,19 +44,28 @@ import AtributeComponent from './AtributeComponent.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFistRaised, faRunning, faHeartbeat, faUserAlt, faHatWizard, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
-import { useController } from './../../services/Controller'
+import { useStore } from 'vuex'
+import { computed } from 'vue'
 
 library.add(faFistRaised, faRunning, faHeartbeat,faUserAlt, faHatWizard, faGraduationCap)
 
 export default {
   components: { AtributeComponent },
-  props: {
-    atributos: {
-      type: Object,
-      default: () => {
-        const { atributos } = useController()
-        return atributos
-      }
+  // props: {
+  //   atributos: {
+  //     type: Object,
+  //     default: () => {
+  //       const { atributos } = useController()
+  //       return atributos
+  //     }
+  //   }
+  // }
+  setup(){
+
+    const store = useStore()
+
+    return {
+      atributos: computed(() => store.state.player.atributos)
     }
   }
 }

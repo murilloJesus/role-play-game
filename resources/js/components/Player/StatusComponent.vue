@@ -1,26 +1,23 @@
 <template>
-  <div class="card" style="width: 100%">
-    <div
-      class="card-body text-center"
-      style="color: blue;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;"
+  <div
+    class="text-center"
+    style="padding:0px;"
+  >
+    <p
+      class="card-text"
+      style="position: absolute; color: white; margin-left: 20px;"
     >
-      <h5 class="card-title">
-        {{ atual }}
-      </h5><p
-        class="card-text"
-        style="width: 40%;margin: auto;border-top: 2px solid blue;"
-      >
-        {{ total }}
-      </p><div
-        class="progress"
-        style="height: 6px; border-radius: 0.2rem; border-top-left-radius: 0;border-top-right-radius: 0;margin-top: 1.25em;"
-      >
-        <div
-          role="progressbar"
-          :style="style"
-          class="progress-bar"
-        />
-      </div>
+        {{ atual }} /  {{ total }}
+    </p><div
+      class="progress"
+      :style="`border-radius: 0px 20px 4.2rem 0.2rem; height: 25px;`"
+    >
+      <div
+        role="progressbar"
+        :style="style"
+        class="progress-bar progress-bar-striped progress-bar-animated"
+        :class="'bg-'+color"
+      />
     </div>
   </div>
 </template>
@@ -37,6 +34,10 @@ export default {
         const { status } = useController()
         return status
       }
+    },
+    color:{
+      type: String,
+      default: "blue"
     }
   },
   setup(props){

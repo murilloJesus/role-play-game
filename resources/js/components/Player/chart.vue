@@ -11,14 +11,14 @@ export default defineComponent({
         datasets: [{
           data: [this.experiencia.experiencia, this.experiencia.resto],
           backgroundColor: [
-            'rgb(0, 153, 0)',
+            'rgb(0, 208, 0)',
             'rgb(208, 208, 208)'
           ],
           hoverOffset: 9
         }]
       },
       {
-        cutoutPercentage: 80
+        cutoutPercentage: 70
       })
 
       this.$watch(
@@ -29,14 +29,14 @@ export default defineComponent({
             datasets: [{
               data: [val.experiencia, val.resto],
               backgroundColor: [
-                'rgb(0, 153, 0)',
+                'rgb(30, 208, 30)',
                 'rgb(208, 208, 208)'
               ],
               hoverOffset: 9
             }]
           },
           {
-            cutoutPercentage: 80
+            cutoutPercentage: 70
           })
         }
       )

@@ -9,6 +9,7 @@ export function useSkillService (initConfigs = sklJSON['açoite']) {
     
     const configs = reactive({
         nome: initConfigs.nome,
+        nivel: initConfigs.nivel,
         velocidade: UseVelicidadeService(initConfigs.velocidade),
         descricao: UseDescricaoService(initConfigs.descricao),
         requisitos:  initConfigs.requisitos,
@@ -17,6 +18,7 @@ export function useSkillService (initConfigs = sklJSON['açoite']) {
     })
 
     function castSkill() {
+        
        const dice =  UseDiceRollerService()
 
        let resolves = Array()

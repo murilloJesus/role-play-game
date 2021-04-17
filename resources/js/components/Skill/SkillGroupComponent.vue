@@ -1,23 +1,26 @@
 <template>
   <div class="list-group">
-    <skill-component :skill="skill" />
+    <skill-component
+      v-for="(skill, index) in habilidades.learned"
+      :key="index"
+      :skill="skill"
+    />
   </div>
 </template>
 
 <script>
 
-import {useSkillService} from './../../services/Skill.service'
-import SkillComponent from './SkillComponent.vue'
-
-import sklJSON from './../../configs/skill.json'
+import SkillComponent from './composition/SkillComponent.vue'
+import { useStore } from 'vuex'
+import { computed } from 'vue'
 
 export default {
   components: { SkillComponent },
     setup() {
-       const skill = useSkillService(sklJSON['estocada'])
+       const store = new useStore()
 
         return {
-          skill
+          habilidades: computed(() => store.state.player.habilidades)
         }
     }
 }

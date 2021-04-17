@@ -1,20 +1,18 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-4">
-            <dados-component :nivel="player.nivel"/>
-          </div>
-          <div class="col-md-6">
-            <div class="d-flex flex-column ">
-              <status-component :status="player.status.vida" />
-              <status-component :status="player.status.energia" />
-            </div>
-          </div>
+    <div style="position:relative; margin-bottom: 20px; width: 100px;">
+      <dados-component :nivel="player.nivel" />
+      <div style="position: absolute;top: 22px;left: 73px;  width: 320px; ">
+        <div class="d-flex flex-column ">
+          <status-component
+            :status="player.status.vida"
+            color="danger"
+          />
+          <status-component
+            :status="player.status.energia"
+            color="primary"
+          />
         </div>
-        <br>
-        <atribute-group-component :atributos="player.atributos" />
       </div>
     </div>
   </div>
@@ -23,7 +21,6 @@
 <script>
 import { computed } from 'vue'
 import { useStore } from 'vuex'
-import AtributeGroupComponent from './AtributeGroupComponent'
 import DadosComponent from './DadosComponent.vue'
 import StatusComponent from './StatusComponent.vue'
 
@@ -31,7 +28,6 @@ import StatusComponent from './StatusComponent.vue'
     export default 
     {
       components:{
-        AtributeGroupComponent,
         StatusComponent,
         DadosComponent
       },
