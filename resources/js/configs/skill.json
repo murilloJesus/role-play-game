@@ -133,5 +133,222 @@
         ],
         "requisitos": [],
         "custo": 3
+    },
+    "chuva-cosmica" : {
+        "nome" : "Chuva Cosmica",
+        "nivel": 1,
+        "velocidade" : 0,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Dispara 2 fragmentos de energia que causam "
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "sabedoria",
+                            "function": "x/3"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "de dano. Depois realiza um ultimo disparo fortalecido que causa"
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1 ,
+                            "size": 4
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "sabedoria",
+                            "function": "x/2"
+                        }
+                    ]
+                }
+            }
+        ],
+        "requisitos": [],
+        "custo": 4
+    },
+    "resfriamento" : {
+        "nome" : "Resfriamento",
+        "nivel": 1,
+        "velocidade" : 1,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Reduz a movimentação do alvo em"
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 6
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "sabedoria",
+                            "function": "x/3"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "M no proximo turno."
+            }
+        ],
+        "requisitos": [],
+        "custo": 3
+    },
+    "ilusao" : {
+        "nome" : "Ilusão",
+        "nivel": 1,
+        "velocidade" : 1,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Posiciona uma ilusão que será atacada em seu lugar, é destruida ao ser atacada."
+            }
+        ],
+        "requisitos": [],
+        "custo": 4
+    },
+    "shot" : {
+        "nome" : "Shot Rapido",
+        "nivel": 1,
+        "velocidade" : 2,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Faça um"
+            },
+            {
+                "type": "ação",
+                "value": "teste"
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 10
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "agilidade",
+                            "function": "x"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "para causar "
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 2,
+                            "size": 4
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "inteligencia",
+                            "function": "x/3"
+                        }
+                    ]
+                }
+            }
+        ],
+        "requisitos": [],
+        "custo": 3
+    },
+    "cinto" : {
+        "nome" : "Cinto de Emêrgencia",
+        "nivel": 1,
+        "velocidade" : 1,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Posiciona um aparelho à até"
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 6
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "forca",
+                            "function": "x"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "M de distancia. Ao ser acionado o usuario do cinto é atraido para a posição do aparelho "
+            }
+        ],
+        "requisitos": [],
+        "custo": 3
+    },
+    "faca" : {
+        "nome" : "Facada curta",
+        "nivel": 1,
+        "velocidade" : 0,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Desfere um golpe causando"
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 4
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "forca",
+                            "function": "x/2"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "de dano. "
+            }
+        ],
+        "requisitos": [],
+        "custo": 2
     }
 }

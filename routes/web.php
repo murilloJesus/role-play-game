@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{page}', function ($page) {
-    return view('main');
+Route::get('/{classe}', function ($classe) {
+    return view('main', ['classe' => $classe]);
 });
 
 Auth::routes();

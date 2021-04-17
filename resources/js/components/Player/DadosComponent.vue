@@ -23,7 +23,7 @@
           {{ nivel.nivel }}
         </h3>
         <small>
-          {{ experiencia_atual }} / {{ experiencia_total }}
+          {{ experiencia_atual }} /  {{ experiencia_total }}
         </small>
       </div>
     </div>
@@ -32,23 +32,48 @@
       class="text-center"
       style="    width: 226px; top: 81px; position: absolute;"
     >
-      <b>Murillo</b><br><small> Humano / Guerreiro </small>
+      <b>Murillo</b><br><small> Humano / <classe-component />  </small>
     </div>
   </div>
   <a
     class="btn btn-outline-primary"
     role="button"
     style="z-index: 11;position: relative;"
-    @click="nivel.add_experiencia(100)"
+    @click="addExp()"
   />
+    <modal
+    :visible="confirmModal"
+  >
+    <template #body>
+      Quantidade?
+      <label />
+      <input
+        v-model="valor" 
+        class="form-control"
+        type="text"
+      >
+    </template>
+    <template #footer>
+      <button
+        type="button"
+        class="btn btn-primary"
+        @click="confirmModal.tell(true)"
+      >
+        Adicionar
+      </button>
+    </template>
+  </modal>
 </template>
 
 <script>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import chart from "./chart.vue"
+import { usePromiseModal } from '../../services/usePromiseModal'
+import Modal from '../modal'
+import ClasseComponent from './ClasseComponent.vue'
 
 export default {
-  components: { chart },
+  components: { ClasseComponent, chart, Modal },
   props: ['nivel'],
   setup(props){
 
@@ -67,7 +92,23 @@ export default {
       }
     })
 
+    const confirmModal = usePromiseModal()
+
+    const valor = ref('')
+
+    const addExp = async () => {
+      await confirmModal.ask().then((res) => {
+        if(res){
+         props.nivel.add_experiencia(parseInt(valor.value))
+        }
+      })         
+    }
+      
+
     return {
+      valor,
+      addExp,
+      confirmModal,
       experiencia_total,
       experiencia_atual,
       data_chart

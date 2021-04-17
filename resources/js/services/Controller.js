@@ -32,6 +32,7 @@ export function useController(class_name){
   const habilidades = useHabilidadeService(classe.habilidades)
 
   return {
+    classe,
     nivel,
     pontos,
     atributos,

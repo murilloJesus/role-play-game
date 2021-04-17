@@ -1,6 +1,31 @@
 {
-    "nordico" :{
-        "name" : "Nórdico",
+    "initial" :{
+        "name" : "Inicial",
+        "base_status": {
+            "forca" :2,
+            "agilidade" : 2,
+            "resistencia" : 2,
+            "carisma" : 2,
+            "sabedoria" : 2,
+            "inteligencia" : 2
+        },
+        "habilidades": [
+        ],
+        "vida" :{
+            "base": 16,
+            "modifier": "resistencia",
+            "modifier_base": 1,
+            "use": 0
+        },
+        "energia" :{
+            "base": 5,
+            "modifier": "agilidade",
+            "modifier_base": 1,
+            "use": 0
+        }
+    },
+    "barbaro" :{
+        "name" : "Barbáro",
         "base_status": {
             "forca" : 4,
             "agilidade" : 2,
@@ -27,31 +52,59 @@
             "use": 0
         }
     },
-    "arquiteto" :{
-        "name" : "Arquiteto",
+    "arcano" :{
+        "name" : "Arcano",
         "base_status": {
-            "forca" :2,
-            "agilidade" : 1,
-            "resistencia" : 3,
-            "carisma" : 0,
-            "sabedoria" : 2,
-            "inteligencia" : 4
+            "forca" : 0,
+            "agilidade" : 3,
+            "resistencia" : 2,
+            "carisma" : 2,
+            "sabedoria" : 4,
+            "inteligencia" : 1
         },
         "habilidades": [
-            "atacar",
-            "",
-            "mapear"
+            "chuva-cosmica",
+            "resfriamento",
+            "ilusao"
         ],
         "vida" :{
-            "base": 21,
+            "base": 18,
             "modifier": "resistencia",
-            "modifier_base": 1.7,
+            "modifier_base": 1.4,
             "use": 0
         },
         "energia" :{
-            "base": 8,
+            "base": 12,
+            "modifier": "sabedoria",
+            "modifier_base": 1.8,
+            "use": 0
+        }
+    },
+    "pistoleiro" :{
+        "name" : "Pistoleiro",
+        "base_status": {
+            "forca" : 2,
+            "agilidade" : 4,
+            "resistencia" : 0,
+            "carisma" : 2,
+            "sabedoria" : 1,
+            "inteligencia" : 3
+        },
+        "habilidades": [
+            "shot",
+            "cinto",
+            "faca"
+        ],
+        "vida" :{
+            "base": 15,
+            "modifier": "resistencia",
+            "modifier_base": 1.8,
+            "use": 0
+        },
+        "energia" :{
+            "base": 10,
             "modifier": "agilidade",
-            "modifier_base": 2,
+            "modifier_base": 1.3,
             "use": 0
         }
     }

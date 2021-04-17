@@ -61,7 +61,9 @@
             var modal = reactive({})
 
             onMounted(() => {
-                modal = new Modal(refModal.value)
+                modal = new Modal(refModal.value, {
+                  backdrop:false
+                })
                 $(refModal.value).on("hide.bs.modal", () => {
                     props.visible.tell(false)
                 })
