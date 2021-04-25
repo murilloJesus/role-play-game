@@ -7,10 +7,10 @@ export function useStatusService(atributos, configs = {
   use: 0
 }){
 
-  var use = ref(configs.use);
+  var use = ref(configs.value.use);
 
   function total_val(){
-    return configs.base + parseInt(atributos[configs.modifier].value * configs.modifier_base)
+    return configs.value.base + parseInt(atributos[configs.value.modifier].value * configs.value.modifier_base)
   }
 
   function final_val(){
@@ -19,6 +19,8 @@ export function useStatusService(atributos, configs = {
 
   function add_use(val){
     use.value += val
+    if (use.value > total_val()) use.value = total_val()
+    if (use.value < 0) use.value = 0
   }
 
   function percent_val(){

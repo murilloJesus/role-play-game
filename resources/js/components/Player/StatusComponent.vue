@@ -59,7 +59,6 @@ import { computed, ref } from 'vue'
 import { useController } from '../../services/Controller'
 import Modal from './../modal'
 import { usePromiseModal } from '../../services/usePromiseModal'
-import { useStore } from  'vuex'
 
 export default {
   components: {
@@ -99,9 +98,9 @@ export default {
     const changeValue = async () => {
       await confirmModal.ask().then((res) => {
         if(res === 'retirar'){
-          props.status.add_use(-valor.value)
-        }else if(res === 'adicionar'){
           props.status.add_use(parseInt(valor.value))
+        }else if(res === 'adicionar'){
+          props.status.add_use(parseInt(-valor.value))
         }
       })         
     }

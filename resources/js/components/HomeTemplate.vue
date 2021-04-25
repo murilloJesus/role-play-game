@@ -46,14 +46,17 @@
           </p>
         </div>
       </nav>
-      <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0">
-        <div>
+      <div class="container">
+        <div style="margin: 30px auto; max-width:600px">
           <skill-group-component />
           <!-- <router-view /> -->
         </div>
+        <div style="margin: 30px auto; max-width:600px">
+          <weapon />
+        </div>
       </div>
     </div>
-   <dice-history-component />
+    <dice-history-component />
     <div
       id="canvas"
       style="position: absolute"
@@ -68,13 +71,16 @@ import PlayerComponent from './Player/PlayerComponent.vue'
 import DiceHistoryComponent from './DiceHistoryComponent.vue'
 import { onMounted } from 'vue'
 import AtributeGroupComponent from './Player/AtributeGroupComponent.vue'
+import Weapon from './Weapon'
+
 export default {
   components: {
     MenuTemplate,
     SkillGroupComponent,
     PlayerComponent,
     AtributeGroupComponent,
-    DiceHistoryComponent
+    DiceHistoryComponent,
+    Weapon
   },
   setup(){
 

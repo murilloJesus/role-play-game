@@ -15,6 +15,7 @@
         v-if="item.type == 'damage'"
         :key="index"
         :damage="item.value"
+        :weapon="weapon"
       />
     </template>
   </p>
@@ -32,6 +33,12 @@ export default {
         type: Array,
         default: () => {
           return []
+        }
+      },
+      weapon: {
+        type: Object,
+        default: () => {
+          return {}
         }
       }
     },

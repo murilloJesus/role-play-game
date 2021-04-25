@@ -6,7 +6,7 @@ export function useHabilidadeService (hab_list){
 
     const learned = reactive([])
 
-    hab_list.forEach(skill => {
+    hab_list.value.forEach(skill => {
         learned.push(useSkillService(sklJSON[skill]))
     });
 

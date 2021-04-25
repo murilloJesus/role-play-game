@@ -13,11 +13,12 @@ import { useStore } from 'vuex'
 import { Tooltip } from 'bootstrap'
 
 export default {
-    props: ['real'],
+    props: ['real', 'weapon'],
     setup(props) {
       const store = useStore()      
 
-      const x = computed(() => store.state.player.atributos[props.real.modifier].value)
+      const max = computed(() => props.weapon ? store.state.player.coldre.getMaxModifier(props.weapon.atribute) : 18)
+      const x = computed(() => store.state.player.atributos[props.real.modifier].value > max.value ? max.value : store.state.player.atributos[props.real.modifier].value)
       const nome =  store.state.player.atributos[props.real.modifier].name
 
       const tooltip = ref(null)

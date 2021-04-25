@@ -1,7 +1,10 @@
 <template>
   <div style="width: 60%">
+    <validator
+      :requisito="requisitos.arma"
+    />
     <template
-      v-for="(item, index) in requisitos"
+      v-for="(item, index) in requisitos.atributos"
       :key="index"
     >
       <validator

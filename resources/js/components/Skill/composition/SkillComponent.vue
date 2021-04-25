@@ -2,8 +2,8 @@
   <div
     v-if="skill.configs.nivel <= level"
     class="list-group-item list-group-item-action"
-    @click="castSkill()"
     :class="enabled"
+    @click="castSkill()"
   >
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">
@@ -11,7 +11,10 @@
       </h5>
       <velocidade-component :velocidade="skill.configs.velocidade" />
     </div>
-    <descricao-component :descricao="skill.configs.descricao.value" />
+    <descricao-component
+      :descricao="skill.configs.descricao.value"
+      :weapon="skill.configs.requisitos.arma"
+    />
     <div class="d-flex w-100 justify-content-between">
       <requisitos-component :requisitos="skill.configs.requisitos" />
       <custo-component :custo="skill.configs.custo" />

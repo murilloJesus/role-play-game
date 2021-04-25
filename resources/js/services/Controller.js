@@ -1,38 +1,42 @@
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 import { useAtributeService } from "./Atribute.service";
 import { useNivelService } from "./Nivel.service";
 import { usePontosService } from "./Pontos.service"
 import { useStatusService } from "./Status.service";
 import { useHabilidadeService } from "./Habilidades.service";
 
-import classJSON from './../configs/classe.json'
+import { useClasseService } from "./Classe.service";
+import { useColdreService } from "./Coldre.service";
 
 export function useController(class_name){
 
-  const classe = classJSON[class_name]
+  const classe = useClasseService(class_name)
 
   const nivel = useNivelService()
-
+  
   const pontos = usePontosService(nivel)
 
+  const coldre = useColdreService();
+
   const atributos = reactive({
-    forca:  useAtributeService('Força', pontos, classe.base_status.forca),
-    agilidade:  useAtributeService('Agilidade', pontos, classe.base_status.agilidade),
-    resistencia:  useAtributeService('Resistência', pontos, classe.base_status.resistencia),
-    carisma:  useAtributeService('Carisma', pontos, classe.base_status.carisma),
-    sabedoria:  useAtributeService('Sabedoria', pontos, classe.base_status.sabedoria),
-    inteligencia:  useAtributeService('Inteligência', pontos, classe.base_status.inteligencia)
+    forca:  useAtributeService('Força', pontos, classe, 'forca'),
+    agilidade:  useAtributeService('Agilidade', pontos, classe, 'agilidade'),
+    resistencia:  useAtributeService('Resistência', pontos, classe, 'resistencia'),
+    carisma:  useAtributeService('Carisma', pontos, classe, 'carisma'),
+    sabedoria:  useAtributeService('Sabedoria', pontos, classe, 'sabedoria'),
+    inteligencia:  useAtributeService('Inteligência', pontos, classe, 'inteligencia')
   })
 
   const status = reactive({
-    vida: useStatusService(atributos, classJSON[class_name].vida),
-    energia: useStatusService(atributos, classJSON[class_name].energia)
+    vida: useStatusService(atributos, ref(classe.configs.vida)),
+    energia: useStatusService(atributos, ref(classe.configs.energia))
   })
 
-  const habilidades = useHabilidadeService(classe.habilidades)
+  const habilidades = useHabilidadeService(ref(classe.configs.habilidades))
 
   return {
     classe,
+    coldre,
     nivel,
     pontos,
     atributos,

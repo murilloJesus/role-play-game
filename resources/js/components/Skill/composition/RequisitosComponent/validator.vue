@@ -29,12 +29,12 @@ export default {
         var validate = false
 
         switch(props.requisito.type){
-            case 'Arma':
-                 value = computed(() => store.state.player.arma[props.requisito.atribute])
-                 descrição += `Tipo de arma deve ser `
+            case 'arma':
+                 value = computed(() => store.state.player.coldre.hasAtribute(props.requisito.atribute))
+                 descrição += `O Coldre deve `
                  break
 
-            case 'Atributo':
+            case 'atributo':
                  value = computed(() => store.state.player.atributos[props.requisito.atribute].value)
                  descrição += `Atributo ${store.state.player.atributos[props.requisito.atribute].name} deve ser `
                  break
@@ -42,6 +42,11 @@ export default {
         }
 
         switch(props.requisito.operator){
+            case '()':
+                validate = value
+                descrição += `conter ${props.requisito.comparison}`
+                break
+
             case '==':
                 validate = computed(() => value.value == props.requisito.comparison)
                  descrição += `igual à ${props.requisito.comparison}`
@@ -71,6 +76,7 @@ export default {
                 validate = computed(() => value.value != props.requisito.comparison)
                 descrição += `diferente de ${props.requisito.comparison}`
                 break
+
         }
 
 

@@ -1,0 +1,93 @@
+{
+    "raridade" : [
+        {
+            "name": "Normal",
+            "max-modifier": 2 
+        },
+        {
+            "name": "Raro",
+            "max-modifier": 6 
+        },
+        {
+            "name": "Épico",
+            "max-modifier": 10 
+        },
+        {
+            "name": "Lendario",
+            "max-modifier": 14 
+        },
+        {
+            "name": "Divino",
+            "max-modifier": 18 
+        }
+    ],
+    "atributos": {
+        "corte" : "Arma de Corte",
+        "arremesso": "Arma de Arremesso",
+        "espada" : "Espada",
+        "escudo": "Escudo",
+        "machado": "Machado"
+    },
+    "images" : {
+        "espada": "https://pngimg.com/uploads/sword/sword_PNG5517.png",
+        "machadinha": "https://static.wikia.nocookie.net/arksurvivalevolved_gamepedia/images/d/d6/Stone_Hatchet.png",
+        "escudo": "https://i.pinimg.com/originals/72/84/a7/7284a747d53b276175ba454cfbf00b95.png"
+    },
+    "armas": {
+        "espada" :{
+            "name": "Espada de Treino",
+            "image": "espada",
+            "raridade": 2,
+            "damage": {
+                "dice" :[
+                    {
+                        "number": 1,
+                        "size": 6
+                    }
+                ],
+                "real" : []
+            },
+            "atributos": [
+                "corte",
+                "espada"
+            ]
+        },
+        "machadinha": {
+            "name": "Machadinha de Pedra",
+            "image": "machadinha",
+            "raridade": 0,
+            "damage": {
+                "dice" :[
+                    {
+                        "number": 1,
+                        "size": 4
+                    }
+                ],
+                "real" : []
+            },
+            "atributos": [
+                "corte",
+                "arremesso",
+                "machado"
+            ]
+        },
+        "escudo": {
+            "name": "Escudo de Madeira",
+            "image": "escudo",
+            "raridade": 0,
+            "damage": {
+                "dice" :[
+                    {
+                        "number": 1,
+                        "size": 4
+                    }
+                ],
+                "real" : []
+            },
+            "atributos": [
+                "escudo"
+            ]
+        }
+    }
+    
+}

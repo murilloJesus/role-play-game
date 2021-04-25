@@ -30,15 +30,15 @@
                 "value": "de dano."
             }
         ],
-        "requisitos": [
-            {
-                "type":"Atributo",
-                "atribute":"agilidade",
-                "operator":">",
-                "comparison": 3
-            }
-            
-        ],
+        "requisitos": {
+            "arma": {
+                "type": "arma",
+                "atribute": "espada",
+                "operator": "()",
+                "comparison": "Espada"
+            },
+            "atributos": []
+        },
         "custo": 2
     },
     "machadinha" : {
@@ -93,7 +93,22 @@
                 "value": "de dano."
             }
         ],
-        "requisitos": [],
+        "requisitos": {
+            "arma": {
+                "type": "arma",
+                "atribute": "machado",
+                "operator": "()",
+                "comparison": "Machado"
+            },
+            "atributos": [
+                {
+                    "type":"atributo",
+                    "atribute":"forca",
+                    "operator":">=",
+                    "comparison": 5
+                }
+            ]
+        },
         "custo": 3
     },
     "escudo" : {
@@ -131,7 +146,22 @@
                 "value": "para bloquear um ataque físico."
             }
         ],
-        "requisitos": [],
+        "requisitos":  {
+            "arma": {
+                "type": "arma",
+                "atribute": "escudo",
+                "operator": "()",
+                "comparison": "Escudo"
+            },
+            "atributos": [
+                {
+                    "type":"atributo",
+                    "atribute":"agilidade",
+                    "operator":">=",
+                    "comparison": 5
+                }
+            ]
+        },
         "custo": 3
     },
     "chuva-cosmica" : {
@@ -350,5 +380,314 @@
         ],
         "requisitos": [],
         "custo": 2
+    },
+    "rompe-buxo" : {
+        "nome" : "Rompe Buxo",
+        "nivel": 3,
+        "velocidade" : 0,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Desfere um golpe em 360º graus causando"
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 8
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "forca",
+                            "function": "x/3"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "de dano a todos os inimigos atingidos."
+            }
+        ],
+        "requisitos": {
+            "arma": {
+                "type": "arma",
+                "atribute": "machado",
+                "operator": "()",
+                "comparison": "Machado"
+            },
+            "atributos": [
+                {
+                    "type":"atributo",
+                    "atribute":"forca",
+                    "operator":">=",
+                    "comparison": 5
+                }
+            ]
+        },
+        "custo": 7
+    },
+    "quebra-cranio" : {
+        "nome" : "Quebra Crânio",
+        "nivel": 3,
+        "velocidade" : 1,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Desfere um ataque com o martelo da machada, causando"
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 4 
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "forca",
+                            "function": "x/4"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "de dano. Vença um "
+            },
+            {
+                "type": "ação",
+                "value": "teste"
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 10 
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "forca",
+                            "function": "x"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "para desabilitar o inimigo atingido pelo turno."
+            }
+
+        ],
+        "requisitos": {
+            "arma": {
+                "type": "arma",
+                "atribute": "machado",
+                "operator": "()",
+                "comparison": "Machado"
+            },
+            "atributos": [
+                {
+                    "type":"atributo",
+                    "atribute":"forca",
+                    "operator":">=",
+                    "comparison": 5
+                }
+            ]
+        },
+        "custo": 4
+    },
+    "aniquilar" : {
+        "nome" : "Aniquilação",
+        "nivel": 5,
+        "velocidade" : 0,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Vença um teste médio "
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 10
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "forca",
+                            "function": "x"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "Maior que 14 para Atacar Novamente."
+            }
+        ],
+        "requisitos": {
+            "arma": {
+                "type": "arma",
+                "atribute": "machado",
+                "operator": "()",
+                "comparison": "Machado"
+            },
+            "atributos": [
+                {
+                    "type":"atributo",
+                    "atribute":"forca",
+                    "operator":">=",
+                    "comparison": 5
+                }
+            ]
+        },
+        "custo": 5
+    },
+    "barreira" : {
+        "nome" : "Barreira",
+        "nivel": 3,
+        "velocidade" : 1,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Receba um escudo de "
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 6
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "sabedoria",
+                            "function": "x/4"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": ". Esse escudo perde metade do seu valor ao final do turno."
+            }
+        ],
+        "requisitos": [],
+        "custo": 3
+    },
+    "explosao-energia" : {
+        "nome" : "Exposão de Mana",
+        "nivel": 3,
+        "velocidade" : 0,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Causa "
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 8
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "sabedoria",
+                            "function": "x/4"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": "A todos os inimigos num raio de "
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 6
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "sabedoria",
+                            "function": "x/2"
+                        }
+                    ]
+                }
+            }
+        ],
+        "requisitos": [],
+        "custo": 7
+    },
+    "infusao" : {
+        "nome" : "Infusão Hexagonal",
+        "nivel": 5,
+        "velocidade" : 0,
+        "descricao" : [
+            {
+                "type": "string",
+                "value": "Vença um teste "
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 1,
+                            "size": 10
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "inteligencia",
+                            "function": "x"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "string",
+                "value": " para causar "
+            },
+            {
+                "type": "damage",
+                "value": {
+                    "dice": [
+                        {
+                            "number": 2,
+                            "size": 12
+                        }
+                    ],
+                    "real" : [
+                        {
+                            "modifier" : "sabedoria",
+                            "function": "x/3"
+                        }
+                    ]
+                }
+            }
+        ],
+        "requisitos": [],
+        "custo": 8
     }
 }

@@ -1,5 +1,5 @@
 <template>
-  <small @click="changeClass()">{{ classe.name }}</small>
+  <small @click="changeClass()">{{ classe.configs.name }}</small>
   <modal
     :visible="confirmModal"
   >
@@ -48,16 +48,7 @@ export default {
         
         const confirmModal = usePromiseModal()
 
-        const changeClass = async () => {
-            await confirmModal.ask().then((res) => {
-                if(res != false){
-                    store.state.player.setClass(res)
-                }
-            })         
-        }
-
         return {
-            changeClass,
             confirmModal,
             classe: computed(() => store.state.player.classe)
         }

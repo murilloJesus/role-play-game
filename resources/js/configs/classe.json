@@ -37,7 +37,10 @@
         "habilidades": [
             "espada",
             "machadinha",
-            "escudo"
+            "escudo",
+            "rompe-buxo",
+            "quebra-cranio",
+            "aniquilar"
         ],
         "vida" :{
             "base": 21,
@@ -65,7 +68,10 @@
         "habilidades": [
             "chuva-cosmica",
             "resfriamento",
-            "ilusao"
+            "ilusao",
+            "barreira",
+            "explosao-energia",
+            "infusao"
         ],
         "vida" :{
             "base": 18,
@@ -93,7 +99,10 @@
         "habilidades": [
             "shot",
             "cinto",
-            "faca"
+            "faca",
+            "mina",
+            "disfarce",
+            "frenesi"
         ],
         "vida" :{
             "base": 15,

@@ -15,7 +15,10 @@
     v-for="(item, index) in damage.real"
     :key="index"
   >
-    <real :real="item" />&nbsp
+    <real
+      :real="item"
+      :weapon="weapon"
+    />&nbsp
     <template v-if="index+1 < damage.real.length">
       +&nbsp
     </template>
@@ -31,7 +34,7 @@ export default {
         Real,
         Dice
     }, 
-    props: ['damage']
+    props: ['damage', "weapon"]
 }
 </script>
 
